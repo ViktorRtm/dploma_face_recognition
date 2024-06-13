@@ -7,7 +7,7 @@ Module for face recognition on video. Algoritm based on person trecking and dete
 
 
 # Befor using
-
+!!! FOR STARTING YOU MUST HAVE VIDEOCARD WITH CUDA!!! 
 install required libraries
 ```shell
 pip install requirements.txt
@@ -34,3 +34,30 @@ python3 main.py
 when scripts start, you must answer on 3 questions:
 
 - 1 question
+```shell
+Do you want save crop image?
+Please enter - y/n:
+```
+if you enter 'y', next step
+```shell
+Enter dir for video:
+```
+for example
+```shell
+Enter dir for video:/home/viktor/projects/diploma_fr/dploma_face_recognition/experiments
+```
+- 2 question
+```shell
+Do you want write and show video with detection?
+Please enter - y/n:
+```
+- 3 question
+```shell
+Do you want save file with results?
+Please enter - y/n:
+```
+
+and finally you must enter path for video file
+```shell
+Please enter path to video file -
+```
