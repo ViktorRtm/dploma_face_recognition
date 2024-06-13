@@ -1,0 +1,15 @@
+services:
+
+  db:
+    restart: always
+    image: ankane/pgvector
+    environment:
+      POSTGRES_USER: viktor
+      POSTGRES_PASSWORD: 1452
+      POSTGRES_DB: diploma_db
+    volumes:
+      - ~/data/pgdata:/var/lib/postgresql/data
+      - ~/scripts/vector_ext.sql:/docker-entrypoint-initdb.d/001.sql
+      - ~/scripts/create_table.sql:/docker-entrypoint-initdb.d/002.sql
+    ports:
+      - 5432:5432
